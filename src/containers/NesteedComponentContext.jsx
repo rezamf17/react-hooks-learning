@@ -1,22 +1,25 @@
 import React from 'react';
-import {Box, Typography} from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import Section from '../components/NestedComponentSection'
 import Header from '../components/NestedComponentHeader'
 
 const NestedComponentContext = () => {
-    return(
+    return (
         <Box>
             <Typography variant='h5'>Nested-Component : (Non-Context)</Typography>
-            <Section level={1}>
+            <Section>
                 <Header >Title</Header>
-                <Section level={2}>
+                <Section>
                     <Header >Header 2</Header>
                     <Header>Header 2</Header>
                     <Header>Header 2</Header>
-                    <Section level={3}>
+                    <Section>
                         <Header>Header 3</Header>
                         <Header>Header 3</Header>
                         <Header>Header 3</Header>
+                        <Section>
+                            <Header>Header 4</Header>
+                        </Section>
                     </Section>
                 </Section>
             </Section>
